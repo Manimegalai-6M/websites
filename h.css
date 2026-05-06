@@ -552,7 +552,7 @@ footer p{
     width:25px;
     height:25px;
     border-radius:50%;
-    background:rgba(255,255,255,0.45);
+    background:rgba(25, 126, 151, 0.45);
     bottom:-100px;
     animation:float 12s linear infinite;
 }
