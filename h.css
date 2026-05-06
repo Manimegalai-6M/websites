@@ -1,0 +1,810 @@
+# Complete Kids Website CSS (CoComelon Inspired Style)
+
+```css
+/* ======================================
+   🌈 GOOGLE FONT
+====================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================
+   🌟 RESET
+====================================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#bfefff;
+    color:#045b70;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ======================================
+   🌈 SCROLLBAR
+====================================== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#dff8ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#52c7c7;
+    border-radius:20px;
+}
+
+/* ======================================
+   🔝 HEADER
+====================================== */
+header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 7%;
+    background:#52c7c7;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+header div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+header img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:25px;
+    background:white;
+    padding:5px;
+}
+
+header h1{
+    font-size:34px;
+    font-weight:800;
+    color:white;
+}
+
+header p{
+    display:none;
+}
+
+/* ======================================
+   🔗 NAVIGATION
+====================================== */
+
+/* ======================================
+   🔝 HEADER (FIXED + CENTERED NAV)
+====================================== */
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 5%;
+    background:#52c7c7;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* LEFT LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:15px;
+}
+
+.logo h1{
+    color:white;
+    font-size:26px;
+}
+
+/* CENTER NAV */
+.nav-center{
+    display:flex;
+    gap:40px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.nav-center a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-center a:hover{
+    color:#fff7b0;
+}
+
+/* RIGHT BUTTON */
+.nav-right{
+    display:flex;
+    align-items:center;
+}
+
+.yt-btn{
+    background:#ff4d6d;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.yt-btn:hover{
+    background:#e63950;
+    transform:translateY(-3px);
+}
+/* ======================================
+   🌟 HERO SECTION
+====================================== */
+#home{
+    min-height:95vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:80px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("your-banner-image.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    border-bottom-left-radius:60px;
+    border-bottom-right-radius:60px;
+
+    position:relative;
+    overflow:hidden;
+}
+
+#home::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,0.1);
+    border-radius:50%;
+    top:-150px;
+    left:-150px;
+}
+
+#home::after{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    bottom:-150px;
+    right:-100px;
+}
+
+#home h2{
+    font-size:72px;
+    max-width:950px;
+    color:white;
+    line-height:1.1;
+    margin-bottom:25px;
+    font-weight:800;
+    text-shadow:0 5px 25px rgba(0,0,0,0.3);
+    z-index:2;
+}
+
+#home p{
+    font-size:28px;
+    color:white;
+    font-weight:500;
+    z-index:2;
+}
+
+/* ======================================
+   🌟 GENERAL SECTIONS
+====================================== */
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    font-size:58px;
+    color:#045b70;
+    margin-bottom:35px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+section p{
+    font-size:20px;
+}
+
+/* ======================================
+   🎬 VIDEOS SECTION
+====================================== */
+#videos{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+#videos div{
+    flex:1;
+    min-width:320px;
+}
+
+#videos h2{
+    font-size:54px;
+}
+
+#videos p{
+    max-width:550px;
+}
+
+/* ======================================
+   ⚡ SHORTS SECTION
+====================================== */
+#shorts{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+#shorts div{
+    flex:1;
+    min-width:320px;
+}
+
+#shorts h2{
+    font-size:54px;
+}
+
+#shorts p{
+    max-width:550px;
+}
+
+/* ======================================
+   🎥 VIDEO FRAMES
+====================================== */
+iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:35px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+iframe:hover{
+    transform:translateY(-10px) scale(1.01);
+}
+
+/* ======================================
+   💡 IDEAS SECTION
+====================================== */
+#ideas{
+    text-align:center;
+}
+
+#ideas > div{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+#ideas div div{
+    background:white;
+    width:320px;
+    padding:40px 30px;
+    border-radius:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+#ideas div div:hover{
+    transform:translateY(-12px);
+}
+
+#ideas h3{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#045b70;
+}
+
+#ideas p{
+    font-size:19px;
+    color:#06656b;
+}
+
+/* ======================================
+   🤖 AI TOOLS SECTION
+====================================== */
+#tools{
+    text-align:center;
+    background:white;
+    border-radius:50px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.06);
+}
+
+button{
+    padding:18px 42px;
+    margin:15px;
+    border:none;
+    border-radius:60px;
+    background:#0c8a92;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+button:hover{
+    background:#06656b;
+    transform:translateY(-5px);
+}
+
+/* ======================================
+   🧑 ABOUT SECTION
+====================================== */
+#about{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+
+    background:white;
+    padding:70px;
+    border-radius:50px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+#about div{
+    flex:1;
+    min-width:320px;
+}
+
+#about img{
+    width:100%;
+    max-width:420px;
+    border-radius:40px;
+    object-fit:cover;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+#about h2{
+    margin-bottom:25px;
+}
+
+#about p{
+    font-size:21px;
+    color:#06656b;
+}
+
+/* ======================================
+   🌈 BRAND SECTION
+====================================== */
+#brand{
+    background:#52c7c7;
+    border-radius:55px;
+    text-align:center;
+    padding:100px 30px;
+    color:white;
+}
+
+#brand h2{
+    color:white;
+    font-size:62px;
+    margin-bottom:40px;
+}
+
+#brand p{
+    font-size:26px;
+    margin:22px 0;
+    font-weight:500;
+}
+
+/* ======================================
+   📩 CONTACT (ICONS STYLE)
+====================================== */
+#contact{
+    text-align:center;
+}
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.contact-box a{
+    text-decoration:none;
+    background:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:18px;
+    color:#045b70;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.contact-box a:hover{
+    transform:translateY(-5px);
+}
+
+/* ICON COLORS */
+.fa-youtube{ color:red; }
+.fa-instagram{ color:#e1306c; }
+.fa-envelope{ color:#006d77; }
+.fa-linkedin{ color:#0077b5; }
+.fa-github{ color:#333; }
+/* ======================================
+   🔻 FOOTER
+====================================== */
+#about div{
+    flex:1;
+    min-width:320px;
+}
+
+#about img{
+    width:100%;
+    max-width:420px;
+    border-radius:40px;
+    object-fit:cover;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+
+footer{
+    background:#006d77;
+    color:white;
+    padding:90px 8%;
+    margin-top:100px;
+    position:relative;
+    overflow:hidden;
+}
+
+footer::before{
+    content:'';
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.05);
+    right:-100px;
+    top:-100px;
+}
+
+footer p{
+    font-size:22px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+/* ======================================
+   ✨ FLOATING BUBBLES
+====================================== */
+.bubbles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.bubbles span{
+    position:absolute;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.45);
+    bottom:-100px;
+    animation:float 12s linear infinite;
+}
+
+.bubbles span:nth-child(1){
+    left:10%;
+    animation-duration:8s;
+}
+
+.bubbles span:nth-child(2){
+    left:25%;
+    animation-duration:12s;
+}
+
+.bubbles span:nth-child(3){
+    left:45%;
+    animation-duration:10s;
+}
+
+.bubbles span:nth-child(4){
+    left:65%;
+    animation-duration:14s;
+}
+
+.bubbles span:nth-child(5){
+    left:85%;
+    animation-duration:9s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* ======================================
+   🌟 HOVER ANIMATION
+====================================== */
+section,
+#about,
+#tools,
+#contact,
+#brand{
+    transition:0.4s;
+}
+
+section:hover{
+    transform:translateY(-2px);
+}
+
+/* ======================================
+   📱 TABLET RESPONSIVE
+====================================== */
+@media(max-width:992px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+        padding:25px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
+
+    #home h2{
+        font-size:52px;
+    }
+
+    section h2{
+        font-size:44px;
+    }
+
+    #videos,
+    #shorts,
+    #about{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    #videos p,
+    #shorts p{
+        margin:auto;
+    }
+
+    iframe{
+        height:300px;
+    }
+
+    #brand h2{
+        font-size:46px;
+    }
+}
+
+/* ======================================
+   📱 MOBILE RESPONSIVE
+====================================== */
+@media(max-width:768px){
+
+    section{
+        padding:70px 20px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    #home{
+        min-height:75vh;
+    }
+
+    #home h2{
+        font-size:38px;
+    }
+
+    #home p{
+        font-size:20px;
+    }
+
+    section h2{
+        font-size:34px;
+    }
+
+    section p{
+        font-size:18px;
+    }
+
+    iframe{
+        height:230px;
+        border-radius:25px;
+    }
+
+    #ideas div div{
+        width:100%;
+    }
+
+    #about{
+        padding:40px 25px;
+    }
+
+    #brand{
+        padding:70px 20px;
+    }
+
+    #brand h2{
+        font-size:36px;
+    }
+
+    #brand p{
+        font-size:20px;
+    }
+
+    button{
+        width:100%;
+        max-width:320px;
+    }
+
+    footer{
+        padding:60px 20px;
+    }
+
+    footer p{
+        font-size:18px;
+    }
+}
+#instagram{
+    background: #bfefff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#instagram h2{
+    font-size: 50px;
+    color: #005b66;
+    margin-bottom: 30px;
+}
+
+.insta-btn{
+    display: inline-block;
+    background: #006d77;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.insta-gallery{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.insta-gallery img{
+    width: 300px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.insta-gallery img:hover{
+    transform: scale(1.05);
+}
+
+/* ======================================
+   📱 EXTRA SMALL DEVICES
+====================================== */
+@media(max-width:480px){
+
+    #home h2{
+        font-size:30px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    header img{
+        width:60px;
+        height:60px;
+    }
+
+    button{
+        font-size:17px;
+        padding:16px 20px;
+    }
+
+    iframe{
+        height:200px;
+    }
+}
